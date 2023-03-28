@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div>
+        <label for="">Email</label>
+        <input type="text" placeholder="Email" formControlName="email">
+    </div>
+
+    <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched">
+        <p>Введите email</p>
+    </div>
+
+    <div>
+        <label for="">Password</label>
+        <input type="text" placeholder="Password" formControlName="password">
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Send</button>
+
+</form>

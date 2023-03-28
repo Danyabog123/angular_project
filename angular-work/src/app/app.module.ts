@@ -9,6 +9,8 @@ import { ProductComponent } from './components/product/product.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,16 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
     ProductComponent,
     ContactComponent,
     AboutComponent,
-    CatalogComponent
+    CatalogComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
    
   ],
   providers: [],
